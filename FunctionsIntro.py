@@ -1,7 +1,11 @@
 def funcInFunc(func, num = 519):
-    """Call a function on a number through this function! Default num value is 4    20 if nothing else is supplied!
+    """Call a function on a number through this function! Default num value is 5    19 if nothing else is supplied!
     
-    Background: Functions can call other functions within them. You can also pas    s in a function as a parameter of another function as well as set parameters    with default values!!!"""
+    What I Learned: Functions can call other functions within them. You can also    pass in a function as a parameter of another function as well as set
+    parameters with default values!!!
+    
+    funcInFunc(round, 50.8)
+    >>>51"""
     
     return func(num)
 
