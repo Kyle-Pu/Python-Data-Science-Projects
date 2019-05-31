@@ -1,6 +1,7 @@
 # Fundamentals!!!
 These are some small programs I developed to get the hang of Python syntax.
 
+## Programs
 HelloWorld.py: Traditional starter
 
 dictionaries.py: Split up a user-inputted string by first letter into a dictionary.
