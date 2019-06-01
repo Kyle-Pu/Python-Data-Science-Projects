@@ -1,4 +1,7 @@
 # Exploring Data Frames and Series
+Wrote a program to see how data frames and series are structured within Pandas! I also learned how to export data into csv files, Excel spreadsheets, and SQL databases (not included here)!
+
+### Setup
 Make sure to run `pip3 install openpyxl` before attempting to run these programs (assuming you're running Python 3)! This will ensure that writing data to Excel spreadsheets functions properly.
 
 ### Other Notes
