@@ -1,3 +1,4 @@
+print("Loading modules and data...")
 import pandas as pd
 
 # Import the data from csv format
@@ -9,5 +10,7 @@ print(drinks.head())
 
 print("\n\nA quick overview of our data:\n")
 print(drinks.describe())
+
+
 
 # WIP!!!!!
