@@ -14,3 +14,8 @@ This mock spreadsheet contains 6 columns (Name, Machine, Glider, Tank, Bridge, A
 * Machine, Glider, Tank, Bridge, Arm: Shorthand names of our competitions
 
 Note: Binary scheme for project signups (0 = would NOT like to sign up, 1 = WANTS to sign up). This random binary matrix was generated using GNU Octave.
+
+## Set Up
+This program has a simple setup. Simply make sure you run
+`pip3 install xlrd` for Excel spreadsheet support and
+`pip3 install pandas` for Pandas support!
