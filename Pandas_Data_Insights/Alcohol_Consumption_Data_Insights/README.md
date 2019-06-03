@@ -1,7 +1,7 @@
 # Exploring International Alochol Consumption Data
 The following data and description comes from FiveThirtyEight! I'm exploring their alcohol consumption dataset with pandas data manipulation and mapping techniques.
 
-These are some basic insights using data summary and mapping techniques.
+These are some basic insights using data summary and mapping techniques. For grouping, sorting, and multi-indexing techniques, see [NFL Suspensions Data Insights](https://github.com/Kyle-Pu/Fun-With-Python/tree/master/Pandas_Data_Insights/NFL_Suspensions_Data_Insights).
 
 ## Programs
 * basicInsights.py: Gather some basic insights about our data.
