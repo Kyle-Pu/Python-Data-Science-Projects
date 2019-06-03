@@ -1,6 +1,8 @@
 # NFL Suspensions Data Insights
 The following data and description comes from FiveThirtyEight! I'm exploring their NFL suspensions dataset with pandas data manipulation and mapping techniques.
 
+This program gets into more advanced data insights (compared to the [Alcohol Consumption Data Insights](https://github.com/Kyle-Pu/Fun-With-Python/tree/master/Pandas_Data_Insights/Alcohol_Consumption_Data_Insights)) including grouping, sorting, and multi-indexing. 
+
 ## Some Neat Functions and Algorithms
 * groupby() is a neat function I used here to 
 * I used multi-indexing to find team breakdowns that went from team --> player --> number of suspensions for that player
