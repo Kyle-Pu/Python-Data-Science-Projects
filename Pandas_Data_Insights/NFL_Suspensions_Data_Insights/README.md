@@ -1,8 +1,10 @@
 # NFL Suspensions Data Insights
 The following data and description comes from FiveThirtyEight! I'm exploring their NFL suspensions dataset with pandas data manipulation and mapping techniques.
 
-## Some Neat Functions
+## Some Neat Functions and Algorithms
 * groupby() is a neat function I used here to 
+* I used multi-indexing to find team breakdowns that went from team --> player --> number of suspensions for that player
+	* The data came out really neatly and easy to read for this part which surprised me
 
 ## [References](https://github.com/fivethirtyeight/data/tree/master/nfl-suspensions)
 
