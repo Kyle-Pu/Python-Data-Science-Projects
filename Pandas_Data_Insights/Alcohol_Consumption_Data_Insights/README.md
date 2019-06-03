@@ -1,6 +1,8 @@
 # Exploring International Alochol Consumption Data
 The following data and description comes from FiveThirtyEight! I'm exploring their alcohol consumption dataset with pandas data manipulation and mapping techniques.
 
+These are some basic insights using data summary and mapping techniques.
+
 ## Programs
 * basicInsights.py: Gather some basic insights about our data.
 
