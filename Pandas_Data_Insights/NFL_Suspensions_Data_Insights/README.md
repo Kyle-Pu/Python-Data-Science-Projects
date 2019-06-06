@@ -8,11 +8,10 @@ This program gets into more advanced data insights (compared to the [Alcohol Con
 * I used multi-indexing to find team breakdowns that went from team --> player --> number of suspensions for that player
 	* The data came out really neatly and easy to read for this part which surprised me
 
-## [References](https://github.com/fivethirtyeight/data/tree/master/nfl-suspensions)
-
 ## Programs
-* groupingAndSorting.py: Understanding NFL suspension data!
-
+* groupingAndSorting.py: Understanding NFL suspension data
+!
+## [Reference](https://github.com/fivethirtyeight/data/tree/master/nfl-suspensions)
 This folder contains data behind the story [The NFL’s Uneven History Of Punishing Domestic Violence](http://fivethirtyeight.com/features/nfl-domestic-violence-policy-suspensions/).
 
 Header | Definition
