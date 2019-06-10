@@ -1,5 +1,5 @@
 # Modeling With Imperfect Data
-Here, I explore creating machine learning models with __*missing data*__!
+Here, I explore creating machine learning models with __*missing data*__! We'll take a look at how substance abuse of various drugs and age range affect the median number of times a user in an age group used alcohol in the past 12 months.
 
 ## Handling Missing Data
 We have a few different options for handling missing data:
