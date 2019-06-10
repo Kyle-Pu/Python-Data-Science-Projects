@@ -10,3 +10,6 @@ We have a few different options for handling missing data:
 ## Handling Categorical Data
 We can't directly plug in categorical data (strings/text) into our models so we have a few different options to process such data including
   1. Dropping columns with missing data
+
+## Reference and Data
+__Note:__ I manually changed the age column data in the CSV file to get rid of hyphens and the plus (in "65+"). I replaced all age ranges with the average of the low and high end and replaced "65+" with 65.
