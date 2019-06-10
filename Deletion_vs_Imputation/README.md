@@ -10,6 +10,9 @@ We have a few different options for handling missing data:
 ## Manual Preprocessing
 __Note:__ I manually changed the age column data in the CSV file to get rid of hyphens and the plus (in "65+"). I replaced all age ranges with the average of the low and high end and replaced "65+" with 65.
 
+## Type of Imputation
+Coming soon!
+
 ## [Reference](https://github.com/fivethirtyeight/data/tree/master/drug-use-by-age) For Data and Description Below
 Source: [National Survey on Drug Use and Health from the Substance Abuse and Mental Health Data Archive](http://www.icpsr.umich.edu/icpsrweb/content/SAMHDA/index.html).
 
