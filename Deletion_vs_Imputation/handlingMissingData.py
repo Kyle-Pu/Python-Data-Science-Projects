@@ -8,8 +8,8 @@ sys.path.insert(0, '../Tools/')
 from modelComparison import compareModels
 
 import warnings
-warnings.simplefilter(action = "ignore", category = FutureWarning) # Suppress error output: python3.6/site-packages/sklearn/ensemble/forest.py:245: FutureWarning: The default value of n_estimators will change from 10 in version 0.20 to 100 in 0.22. "10 in version 0.20 to 100 in 0.22.", FutureWarning)
-
+warnings.simplefilter(action = "ignore") 
+# Suppress error output: python3.6/site-packages/sklearn/ensemble/forest.py:245: FutureWarning: The default value of n_estimators will change from 10 in version 0.20 to 100 in 0.22. "10 in version 0.20 to 100 in 0.22.", FutureWarning) and a SettingWithCopyWarning
 
 # Import data
 drugUse = pd.read_csv("drug-use-by-age.csv")
@@ -31,23 +31,20 @@ Note: THIS DELETES COLUMNS WITH NaN VAULES SINCE NaN IS OF OBJECT TYPE!!! (I was
 '''
 
 # Find columns with missing data entries
-colsWithMissing = [col for col in X.columns if X[col].isnull().any()]
-print("\n\nColumns with missing data:", colsWithMissing)
+colsWithMissingData = [col for col in X.columns if X[col].isnull().any()]
+print("\n\n--------------------\nColumns with missing data:", colsWithMissingData)
 
-
-
-# Method 1 (Dropping Columns With Missing Data Values)
+# METHOD 1 (Dropping Columns With Missing Data Values)
 # Split our data
-trimmedX = X.drop(colsWithMissing, axis = 1, inplace = False)
+trimmedX = X.drop(colsWithMissingData, axis = 1, inplace = False)
 trainX, validateX, trainY, validateY = train_test_split(trimmedX, y, random_state = 1)
-print("\n\nHere's a peek at our training data when we drop all columns with missing values!", trainX.head(), sep = "\n")
+print("--------------------\n\nHere's a peek at our training data when we drop all columns with missing values!", trainX.head(), sep = "\n\n")
+
+print("--------------------")
 
 methodOneMAE = compareModels(trainX, validateX, trainY, validateY)
-print("\n-->Dropping all columns with missing data produces a random forest model with MAE:", methodOneMAE)
 
-
-
-# Method 2 (Imputation)
+# METHOD 2 (Imputation)
 imputer = SimpleImputer(strategy = "most_frequent")
 trainX, validateX, trainY, validateY = train_test_split(X, y, random_state = 1)
 imputedTrainX = pd.DataFrame(imputer.fit_transform(trainX))
@@ -56,8 +53,36 @@ imputedValidateX = pd.DataFrame(imputer.transform(validateX))
 imputedTrainX.columns = trainX.columns
 imputedValidateX.columns = validateX.columns
 
-print("\n\nHere's a peek at our training data when we impute missing values!", imputedTrainX.head(), sep = "\n")
+print("\n\nHere's a peek at our training data when we impute missing values!", imputedTrainX.head(), sep = "\n\n")
 
 methodTwoMAE = compareModels(imputedTrainX, imputedValidateX, trainY, validateY)
-print("\n-->Imputing missing values with average of column data produces a random forest model with MAE:", methodTwoMAE, "\n\n")
+
+print("--------------------")
+
+# METHOD 3 (Imputation and Column Labels)
+for col in colsWithMissingData:
+    trainX[col + '_missing'] = trainX[col].isnull()
+    validateX[col + '_missing'] = validateX[col].isnull()
+    # Create columns that tell where missing values occurred
+
+newImputer = SimpleImputer(strategy = "median")
+newlyImputedTrainX = pd.DataFrame(newImputer.fit_transform(trainX))
+newlyImputedValidateX = pd.DataFrame(newImputer.transform(validateX))
+
+newlyImputedTrainX.columns = trainX.columns
+newlyImputedValidateX.columns = validateX.columns
+
+methodThreeMAE = compareModels(newlyImputedTrainX, newlyImputedValidateX, trainY, validateY)
+
+print("\n\nHere's a peek at our training data when we impute missing values and keep track of which rows have imputed values", trainX.head(), sep = "\n\n")
+
+print("--------------------")
+
+# Evaluation Results
+print("\n-->Dropping all columns with missing data produces a random forest model with MAE:", methodOneMAE)
+
+print("\n-->Imputing missing values with the median value of each column produces a random forest model with an MAE of", methodTwoMAE)
+
+print("\n-->Imputing missing values with most frequent value of each column and tracking which rows have imputed valuesproduces a random forest model with an MAE of", methodThreeMAE)
+
 
