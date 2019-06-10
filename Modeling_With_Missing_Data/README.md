@@ -1,5 +1,5 @@
 # Modeling With Imperfect Data
-In this repo, I explore creating machine learning models with __*missing data*__ and __*categorical data*__.
+Here, I explore creating machine learning models with __*missing data*__!
 
 ## Handling Missing Data
 We have a few different options for handling missing data:
