@@ -81,8 +81,8 @@ print("--------------------")
 # Evaluation Results
 print("\n-->Dropping all columns with missing data produces a random forest model with MAE:", methodOneMAE)
 
-print("\n-->Imputing missing values with the median value of each column produces a random forest model with an MAE of", methodTwoMAE)
+print("\n-->Imputing missing values with the most frequent value of each column produces a random forest model with an MAE of", methodTwoMAE)
 
-print("\n-->Imputing missing values with most frequent value of each column and tracking which rows have imputed valuesproduces a random forest model with an MAE of", methodThreeMAE)
+print("\n-->Imputing missing values with the median value of each column and tracking which rows have imputed valuesproduces a random forest model with an MAE of", methodThreeMAE)
 
 
