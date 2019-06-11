@@ -1,4 +1,4 @@
-# Fundamentals!!!
+# Python Fundamentals!!!
 These are some small programs I developed to get the hang of Python syntax.
 
 ## Programs
