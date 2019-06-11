@@ -21,8 +21,8 @@ categoricalColumns = [col for col in fifaData.columns if fifaData[col].dtype == 
 
 # Preprocessing algorithms
 processNumerical = SimpleImputer(strategy = 'mean')
-processCategorical = Pipeline(steps = [('impute', SimpleImputer(strategy = "most_frequent")), ('onehot', OneHotEncoder(handle_unknown = 'ignore'))])
-preprocessor = ColumnTransformer(transformers = [('num', processNumerical, numericalColumns), ('cat', processCategorical, categoricalColumns)])
+processCategorical = Pipeline(steps = [('imputer', SimpleImputer(strategy = "most_frequent")), ('onehotencoder', OneHotEncoder(handle_unknown = 'ignore'))])
+preprocessor = ColumnTransformer(transformers = [('numericalProcessor', processNumerical, numericalColumns), ('categoricalProcessor', processCategorical, categoricalColumns)])
 
 # Define the model
 model = RandomForestRegressor(n_estimators = 100, random_state = 1)
