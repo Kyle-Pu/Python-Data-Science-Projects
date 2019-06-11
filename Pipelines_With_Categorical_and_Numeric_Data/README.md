@@ -19,7 +19,7 @@ The mean absolute error for this model is 0.2681280382750777 with current settin
 7) Use the pipeline to process and predict on validation data.
 8) Evaluate the model's accuracy (I used mean absolute error).
 
-## [Reference](https://github.com/fivethirtyeight/data/tree/master/fifa]
+## [Reference](https://github.com/fivethirtyeight/data/tree/master/fifa)
 Once again, this is NOT my data and the description below is NOT mine.
 
 This directory contains the data behind the story [How To Break FIFA](http://fivethirtyeight.com/features/how-to-break-fifa/).
