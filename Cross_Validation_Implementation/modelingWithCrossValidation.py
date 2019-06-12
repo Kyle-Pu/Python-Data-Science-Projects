@@ -26,9 +26,13 @@ print("\nTraining models using cross validation...")
 diffTrees = [n * 50 for n in range(1, 11)]
 allScores = {numTrees: modelAccuracy(numTrees) for numTrees in diffTrees}
 
+# Optimization
+print('\n\n\nAfter running cross validation on all folds of our data, the lowest mean absolute error, based off of our graph, occurs at n_estimators = numTrees = 150! This setting produces a model with an average mean absolute error of', allScores[150])
+
 # Graph allScores to find the minimum mean absolute error setting for n_estimators
 plt.plot(list(allScores.keys()), list(allScores.values()))
 plt.ylabel('Cross Validation MAE Average Score')
 plt.xlabel('n_estimators/numTrees')
 plt.show()
+
 
