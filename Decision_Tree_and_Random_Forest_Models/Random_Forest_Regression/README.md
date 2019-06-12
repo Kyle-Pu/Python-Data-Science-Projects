@@ -6,13 +6,9 @@ This random forest regression model produces a mean absolute error (see below fo
 
 # Background and How It Works
 ## Random Forest Regression
-<<<<<<< HEAD
-In random forest regression, we train a lot of decision tree models that each 
-=======
 A techniqe using multiple decision trees and bootstrap aggregation (or bagging). The overall idea of a random forest model is to take away the limitations of solely relying on a single decision tree. With random forest models, we're able to train multiple decision trees on different data and use averages to improve the prediction accuracy.
 
 Random forest models are great for helping to reduce overfitting and, because they use more than one single decision tree, result in better predictive capabilities as evidenced by the lower mean absolute error (0.283 vs. 0.31 from the decision tree model)!
->>>>>>> 0b1fa2f433741d908d5a68569f30c655b2a55dcc
 
 ## Mean Absolute Error
 This model's MAE based on current settings is about 0.283%!
