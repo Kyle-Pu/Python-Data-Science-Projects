@@ -18,7 +18,7 @@ X = fifaData[numericalColumns]
 # Running cross validation with different numbers of trees in the random forest model
 def modelAccuracy(numTrees):
     mainPipeline = Pipeline(steps = [('preprocessor', SimpleImputer()), ('model', RandomForestRegressor(n_estimators = numTrees, random_state = 1))])
-    cValidationScores =  -1 * cross_val_score(mainPipeline, X, y, cv = 5, scoring = "neg_mean_absolute_error")
+    cValidationScores =  -1 * cross_val_score(mainPipeline, X, y, cv = 5, scoring = "neg_mean_absolute_error") # cv = 5 creates 5 folds in our data
     return cValidationScores.mean()
 
 # Dictionary with numTrees as keys and the model's accuracy for numTrees as values
