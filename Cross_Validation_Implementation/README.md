@@ -3,7 +3,10 @@ Here, I create a model similar to [the FIFA World Cup audience models](https://g
 
 ## Results
 n_estimators = 150 gives the best model after running cross validation on these settings. Feel free to check out the graph below!
-![Graph of n_estimators vs. mean absolute errors produced from cross validation](graph.png)
+
+<p align = "center">
+  <img src=graph.png>
+</p>
 
 ## How It Works
 Cross-validation is a better indicator of model quality because it breaks up our dataset into multiple "folds." We can use a pipeline to train our model on all data excluding each fold (this is an iterative process so we train our model on all data except for the first fold, then all data except for the second fold, etc). Each time, the fold that is excluded from the training data is treated as the validation set so we can measure our model's quality with all data.
