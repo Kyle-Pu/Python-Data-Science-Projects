@@ -10,6 +10,9 @@ We have a few different options for handling missing data:
 ## Manual Preprocessing
 __Note:__ I manually changed the age column data in the CSV file to get rid of hyphens and the plus (in "65+"). I replaced all age ranges with the average of the low and high end and replaced "65+" with 65.
 
+## Avoiding Data Leakage
+I used the imputer separately on both training and validation data instead of using the imputer to fill in missing values on the original data all at once in order to avoid data leakage. If we use the same imputer on the whole dataset at once, we risk the chance of achieving unrealistically high validation scores because the validation data was processed the same exact way as our training data. This error is called __Train-Test Contamination__, but can be avoided by imputing missing values separately on the traiing and testing/validation data!
+
 ## Type of Imputation
 When I used just imputation to handle the missing values, using the most frequent value of each column to fill in missing data worked the best (gave the lowest Mean Absolute Error). There was little to no variation with imputation methods when imputing and creating tracking columns to see which rows had missing values, though (so I just used the median).
 
