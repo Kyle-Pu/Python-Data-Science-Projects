@@ -53,6 +53,7 @@ See below for more details on what changed between Version 1 and Version 2!
 
 ### Model Performance per Epoch
 **VERSION 1**
+
 Epoch 1/20 48000/48000 [==============================] - 58s 1ms/sample - loss: 0.4561 - acc: 0.8356 - val_loss: 0.3404 - val_acc: 0.8741 
 
 Epoch 2/20 48000/48000 [==============================] - 59s 1ms/sample - loss: 0.2905 - acc: 0.8942 - val_loss: 0.3002 - val_acc: 0.8895 
@@ -66,6 +67,7 @@ Epoch 5/20 48000/48000 [==============================] - 61s 1ms/sample - loss:
 ***Note: Epochs 6 - 20 exlcuded for brevity and because no meaningful change in the validation accuracy scores occurred.***
 
 **VERSION 2**
+
 Epoch 1/20
 48000/48000 [==============================] - 3s 60us/sample - loss: 0.9591 - acc: 0.6518 - val_loss: 0.5913 - val_acc: 0.7870
 
