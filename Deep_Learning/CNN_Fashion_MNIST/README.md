@@ -34,8 +34,7 @@ See below for more details on what changed between Version 1 and Version 2!
 5. Batch size = 100 (this is important since we don't have to load whole datasets into memory when we use batches)
 6. 20% of data taken for validation set
 
-**VERSION 2**
-Same as version 1, but add in:
+**VERSION 2 (Added Stride Length Adjustment)**
 1. Strides = 2 --> this means our filters will be applied every other row and every other column. As a result, function maps will be a quarter of their original size and our model will train much faster!
  
 ### Convolutional Neural Network Structure by Layer
