@@ -54,12 +54,19 @@ Same as version 1, but add in:
 
 ### Model Performance per Epoch
 **VERSION 1**
-Epoch 1/20
-48000/48000 [==============================] - 58s 1ms/sample - loss: 0.4561 - acc: 0.8356 - val_loss: 0.3404 - val_acc: 0.8741
+Epoch 1/20 48000/48000 [==============================] - 58s 1ms/sample - loss: 0.4561 - acc: 0.8356 - val_loss: 0.3404 - val_acc: 0.8741 
 
-Epoch 2/20
-48000/48000 [==============================] - 59s 1ms/sample - loss: 0.2905 - acc: 0.8942 - val_loss: 0.3002 - val_acc: 0.8895
+Epoch 2/20 48000/48000 [==============================] - 59s 1ms/sample - loss: 0.2905 - acc: 0.8942 - val_loss: 0.3002 - val_acc: 0.8895 
 
+Epoch 3/20 48000/48000 [==============================] - 60s 1ms/sample - loss: 0.2272 - acc: 0.9156 - val_loss: 0.2836 - val_acc: 0.8984 
+
+Epoch 4/20 48000/48000 [==============================] - 64s 1ms/sample - loss: 0.1836 - acc: 0.9327 - val_loss: 0.2564 - val_acc: 0.9103 
+
+Epoch 5/20 48000/48000 [==============================] - 61s 1ms/sample - loss: 0.1417 - acc: 0.9478 - val_loss: 0.2521 - val_acc: 0.9167 
+
+***Note: Epochs 6 - 20 exlcuded for brevity and because no meaningful change in the validation accuracy scores occurred.***
+
+**VERSION 2**
 Epoch 1/20
 48000/48000 [==============================] - 3s 60us/sample - loss: 0.9591 - acc: 0.6518 - val_loss: 0.5913 - val_acc: 0.7870
 
@@ -96,9 +103,6 @@ Epoch 20/20
 48000/48000 [==============================] - 3s 70us/sample - loss: 0.4430 - acc: 0.8345 - val_loss: 0.3597 - val_acc: 0.8672
 
 ***Note: Each epoch here took only 3 seconds to run versus the first 5 epochs from version 1 of the convolutional neural network, which took about a minute each!!!***
-
-## Analysis of Results
-
 
 ## References
 [1] https://keras.io/models/sequential/
