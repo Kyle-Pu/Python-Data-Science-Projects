@@ -3,8 +3,8 @@ This model is a convolutional neural network that classifies images of clothing 
 
 ## Setup
 Run in the command line:
-`pip3 install tensorflow`
-`pip3 install keras`
+`pip3 install tensorflow`,
+`pip3 install keras`,
 `pip3 install numpy`
 
 **Also make sure to unzip fashion-mnist-train.zip into this directory!**
