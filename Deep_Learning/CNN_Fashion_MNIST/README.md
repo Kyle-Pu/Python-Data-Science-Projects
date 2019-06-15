@@ -1,4 +1,4 @@
-# Deep Learning - Fashion MNIST Image Classification
+# Deep Learning - Convolutional Neural Network Classifier for Fashion MNIST Images
 This model is a convolutional neural network that classifies images of clothing items into 10 separate categories as identified by the Fashion MNIST Dataset!
 
 ## Setup
