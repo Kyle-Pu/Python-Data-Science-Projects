@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from tensorflow.python import keras
 from keras.utils import to_categorical
 from tensorflow.python.keras.models import Sequential
-from tensorflow.python.keras.layers import Dense, Flatten, Conv2D
+from tensorflow.python.keras.layers import Dense, Flatten, Conv2D, Dropout
 
 # PREPROCESSING
 imgSquareSize = 28  # Pictures are 28 * 28 pictues (low resolution)
@@ -29,9 +29,11 @@ print("\nConstructing convolutional neural network...")
 convolutionalNN = Sequential()
 
 # Conv2D Layers (each new layer has 2 times the number of filters/kernels in order to help learn hierarchical features)
-convolutionalNN.add(Conv2D(8, kernel_size = 3, activation = 'relu', input_shape = (imgSquareSize, imgSquareSize, 1)))
-convolutionalNN.add(Conv2D(24, kernel_size = 3, activation = 'relu'))
-convolutionalNN.add(Conv2D(48, kernel_size = 3, activation = 'relu'))
+convolutionalNN.add(Conv2D(8, kernel_size = 3, strides = 2, activation = 'relu', input_shape = (imgSquareSize, imgSquareSize, 1)))
+convolutionalNN.add(Conv2D(24, kernel_size = 3, activation = 'relu', strides = 2))
+convolutionalNN.add(Dropout(0.5))
+convolutionalNN.add(Conv2D(48, kernel_size = 3, activation = 'relu', strides = 2))
+convolutionalNN.add(Dropout(0.5))
 
 convolutionalNN.add(Flatten())
 convolutionalNN.add(Dense(100, activation = 'relu'))
